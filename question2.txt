@@ -1,0 +1,36 @@
+Question Title: Create a Project Folder Structure
+
+Question Link: 
+https://my.newtonschool.co/playground/code/jipp2htnvrww?lecture_hash=v210chxjexei
+
+Solution:
+ls
+cat create-service
+echo '#!/bin/bash
+
+mkdir -p service
+cd service
+mkdir -p controllers
+mkdir -p models
+mkdir -p routes
+mkdir -p middleware
+touch server.js
+touch README.md
+
+echo "API Service" > README.md
+echo '\''console.log("Server started");'\'' > server.js' > create-service
+
+cat create-service
+chmod +x create-service
+./create-service
+
+Approach:
+First, The question asked to check missing files and check for directories named incorrectly
+Using ls first i checked how many files or directories exited, noticed that create-service file was there
+Then, with the help of cat command i checked create-service, noticing many flaws in the file which do not match expected structure
+With the help of echo i changed the required changes to be done on the file create-service and rechecking it using cat
+Then i executed the file using "./*" but it said permissions denied so using chmod i changed the permissions of the files so that it can execute ("+x")
+Finally, the expected service structure is achieved
+
+Result: 
+Expected service structure obtained
