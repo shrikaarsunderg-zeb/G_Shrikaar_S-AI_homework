@@ -1,0 +1,25 @@
+Question Title: Execute a Python Script Directly
+
+Question Link:
+https://my.newtonschool.co/playground/code/mepmefz373b4?lecture_hash=t5qc0u6ap8tg
+
+Solution:
+touch hello.py
+which python3
+echo "#!/usr/bin/env python3" > hello.py
+echo "print('Hello from Python')" >> hello.py
+cat hello.py
+chmod +x hello.py
+./hello.py
+
+Approach: 
+First, the question required me to download a file with name hello.py which will execute a python command 
+Next, to execute a python command we usually use python3 the command which interprits the command of python, to do that for a file and execute i needed to find a path of where the python3 is to use it as shebang operator which helps us to execute python3 in a file 
+Next, using echo "#!/usr/bin/env python3" > hello.py i added shebang operator of python3 path into the file hello.py which will help in executing python command
+Next, the question required us to execute the command print('Hello from Python') using echo i appended the command into hello.py
+To execute the command we need to give the permissions of execute to hello.py so using chmod +x hello.py i have given permissions of execution to hello.py file
+Finally, using ./hello.py i have executed the file which will give the output of command print 
+
+Result: 
+Output: Hello from Python 
+Executed successfully
