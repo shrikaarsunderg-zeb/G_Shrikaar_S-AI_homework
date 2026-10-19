@@ -1,0 +1,27 @@
+Question Title: API-Service Directory Workflow
+
+Question Link: 
+https://my.newtonschool.co/playground/code/5ypni48t3pzs
+
+Solution:
+cd api-service
+git init
+git add README.md 
+git commit -m "Add documentation"
+git add server.js
+git add routes.js
+git add package.json
+git commit -m "Add server files"
+git status 
+git log --oneline
+
+Approach:
+First, i navigated into api-service directory 
+Then, initialized it using git init 
+Then, i needed to stage README.md file so i used git add README.md and then commited it using git commit -m "Add documentation"
+Then, i needed to stage 3 more files server.js routes.js and pacakhe.json using git add i staged all 3 files 
+Then, commit all 3 files using git commit -m "Add server files" 
+FInally, To end it i needed to check the status and log using git log and git status 
+
+Result: 
+Requirements are fullfilled
