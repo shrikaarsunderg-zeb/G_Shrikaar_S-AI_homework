@@ -1,0 +1,34 @@
+Question Title: Advanced File Management
+
+Question Link: 
+https://my.newtonschool.co/playground/code/4ks5o139cfoh?lecture_hash=v210chxjexei
+
+Solution: 
+mkdir project-files
+cd project-files
+touch report.docx summary.docx draft.docx
+cp report.docx report_backup.docx
+mkdir old 
+mv draft.docx old 
+mv summary.docx final_summary.docx
+cp final_summary.docx old 
+rm report_backup.docx
+
+
+Approach: 
+First, i chacked my currect working directory using the command pwd. It showed that iam in /box so i needed to create project-files
+Second, using mkdir i created project-files folder
+Next, I used cd command to navigate inside project-files folder
+The question required me to create 3 files, report.docx, summary.docx, draft.docx using touch i created them
+Then, I had to make a copy of report.docx and rename it to report_backup.docx using cp i did both
+After that, i had to ccreate another folder inside project-files: old, using mkdir i created old
+Then, in old the question asked me to move draft.docx using mv i moved the file into old folder
+The Question mentioned to rename summary .docx to final_summary.docx i changed using mv command which can also rename 
+Then, i required to copu final_summary.docx into old folder using cp i did So
+Finally, I needed to remove the file report_backup.docx using rm i removed the file from the folder 
+
+Result: The final structure looks like as follows:
+Parent folder : project-files
+Files and Folder inside project-files: report.docx, final summary.docx, old/
+In old/ folder: draft.docx, final_summary.docx
+
