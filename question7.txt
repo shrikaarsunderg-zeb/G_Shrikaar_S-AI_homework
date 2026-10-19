@@ -1,0 +1,18 @@
+Question Title: The Missing Project Credentials
+
+Question Link:
+https://my.newtonschool.co/playground/code/7x83ezx6nimm
+
+Solution:
+grep -r "DB_PASSWORD" .
+pwd
+cat EventApp/config/.env > EventApp/db_password.txt
+
+Approach: 
+First, Using grep -r command we can locate the required Word from a directories and files, in this case we require to find the word DB_PASSWORD which containes the key which needs to be in a file on home directory in an new file
+Using pwd i checked where i am, iam in /box so i needed to keep the content of where ever the DB_PASSWORD is (in .env file) inside db_password.txt in home directory which is EventApp
+Finally, using cat EventApp/config/.env > EventApp/db_password.txt i have added the file inside db_password
+
+Result: 
+db_password.txt created successfully
+
