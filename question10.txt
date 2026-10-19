@@ -1,0 +1,25 @@
+Question Title: The Internship Project Setup
+
+Question Link: 
+https://my.newtonschool.co/playground/code/5i36axzh7cl2?lecture_hash=mi7y4g3am46y
+
+Solution: 
+cd client-app
+git init 
+echo "Meow" > index.html
+echo "Meow" > app.js
+git add index.html app.js
+git commit -m "Initial client files"
+git remote add origin https://github.com/startup/client-app.git
+git push -u origin main
+git log
+
+Approach: 
+First, i navigated into the client-app directory using cd and initialized a new git repository using git init
+Then, i created two files, index.html and app.js, and added "Hi" into both using echo
+Next, i staged both files using git add and committed them with the message "Initial client files" using git commit
+After that, i linked the local repository to the remote repository using git remote add and pushed the commit to the main branch using git push
+Finally, i checked the commit history using git log
+
+Result:
+Requirements fullfilled
