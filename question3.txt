@@ -1,0 +1,30 @@
+Question Title: Data Breach Response
+
+Question Link: 
+https://my.newtonschool.co/playground/code/orlr84xpc3oo?lecture_hash=vifkrugjcwth
+
+Solution:
+chmod 755 breach_response/evidence
+chmod 644 breach_response/reports/incident_summary.txt
+cp breach_response/evidence/log_dump.txt breach_response/log_dump.txt
+mv breach_response/evidence breach_response/secure
+echo "Breach confirmed" >> breach_response/reports/incident_summary.txt
+cd breach_response
+cd secure
+echo "Forensics Complete" > forensics_report.txt
+chmod 600 forensics_report.txt
+cd ../..
+echo "Escalated to security team" >> breach_response/reports/incident_summary.txt
+chmod 555 breach_response/secure/evidence
+chmod 444 breach_response/reports/incident_summary.txt
+chmod 000 breach_response/classified.txt
+
+Approach:
+First, i checked the permissions on breach_response/evidence and incident_summary.txt, using chmod 755 and chmod 644 so i could freely access the directory and edit the log file
+Next, i made a copy of log_dump.txt into the main breach_response folder to keep it safe, and renamed the evidence folder to secure using mv to better organize the sensitive data
+After that, i appended "Breach confirmed" to incident_summary.txt using echo >>, i then navigated into breach_response/secure, created the forensics_report.txt file with "Forensics Complete", and immediately locked down its access using chmod 600 so only the file owner could read and write to it
+Finally, i moved back to the root directory, appended "Escalated to security team" to the incident summary, and tightened security across the environment—setting secure to read-only (chmod 555), locking the incident report against further changes (chmod 444), and completely revoking all access permissions on classified.txt using chmod 000
+
+Result:
+-Permissions changed 
+-Expected result acheived
