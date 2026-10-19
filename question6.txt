@@ -1,0 +1,29 @@
+Question Title: Simplify the Compilation Process
+
+Question Link: 
+https://my.newtonschool.co/playground/code/9kh4giios2j4?lecture_hash=t5qc0u6ap8tg
+
+Solution:
+touch build.sh 
+cat hello.c
+which bash
+echo "#!/usr/bin/bash" > build.sh
+cat hello.c build.sh
+echo "gcc hello.c -o hello" >> build.sh
+chmod +x build.sh
+./build.sh
+./hello
+
+Approach: 
+First, Using touch i created a shell required in the wuestion build.sh
+Then using cat command i learnt what is inside the file hello.c, there was a Clang command inside which prints "Hello from C"
+To make build.sh a shell i need to find a compiler which runs the c language, after using which command i checked for clang which executes C language command on the terminal i couldnt find so i checked for a terminal based compiler bash which can help in making the file build.sh a compiler, i used which bash to find the path which is furture used as shebang 
+Using echo "#!/usr/bin/bash" > build.sh i added the shebang operator inside the build.sh 
+Then the question required me to run the hello.c file inside build.sh file so using cat i added hello.c inside build.sh
+Next, using  echo "gcc hello.c -o hello" >> build.sh i added gcc commadn which runs the C lang compiler inside a shell like bash then using -o i changed the name of the file hello.c to hello as required in the question 
+To execute the files i need to give the permission to the file build.sh which will execute everything inside it so i did chmod +x build.sh which gives it execute command permission 
+Finally, i executed build.sh and hello file using "./*"
+
+Result: 
+Output: Hello from C
+Executed successfully
