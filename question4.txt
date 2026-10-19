@@ -1,0 +1,22 @@
+Question Title: Deployment Project Permissions
+
+Question Link:
+https://my.newtonschool.co/playground/code/3wz3wv7c89fo?lecture_hash=vifkrugjcwth
+
+Solution: 
+chmod 700 deployment/app/*.py
+chmod 770 deployment/datasets
+chmod 770 deployment/datasets/*.csv
+chmod 644 deployment/docs/OVERVIEW.md
+chmod 755 deployment/bin/*.sh
+
+Approach: 
+First, i checked the permissions of the given directories in the question they were default 644 for files and 755 for directories 
+Next, i checked the command permissions to be given to files in deployment/app with .py, they required owner with all permissions and others and group with no permission (700)
+Next, the question mentioned to give the drectory datasets and files inside directory datasets with .csv to be given permission for owner and groups with all permissions and others with no permission (770)
+Next, docs directory's file OVERVIEW.md required permissions of read and write for owner and only read for both group and others (644)
+Finally, the bin directory with .sh files require owner with all permissions and groups and others with read and execute permissions (755)
+
+Result:
+All permissions were given 
+Requirements are fullfilled 
